@@ -1,0 +1,19 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>HTML as DOM</title>
+</head>
+
+<body>
+    <p>Khoa<i id="test">Công Nghệ Thông Tin</i></p>
+    <div>ĐH Sài Gòn</div>
+
+	<script>
+        var x = document.getElementById("test");
+        alert(x.innerHTML);
+        x.innerHTML = 'Tp. Hồ Chí Minh';
+        x.style.color = 'green';
+    </script>
+
+</body>
+</html>

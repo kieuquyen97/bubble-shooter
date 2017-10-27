@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Demo js regex 1</title>
+</head>
+
+<body>
+
+	<script>//Modifier page 5		
+		var s= "An de song hay song de an, an gi khong?";
+		document.write(s + "<br/>");
+		
+		var pattern1 = /An/g;
+		var pattern2 = /an/g;
+		var pattern3 = /An/i;
+		var pattern4 = /an/i;
+		var pattern5 = /An/gi;
+		var pattern6 = /an/gi;
+		
+		var output1=s.match(pattern1);
+		alert("/An/g");
+		document.write(output1);
+		document.write("<br/>"); 
+		
+		var output2=s.match(pattern2);
+		alert("/an/g");
+		document.write(output2);
+		document.write("<br/>");
+		
+		var output3=s.match(pattern3);
+		alert("/An/i");
+		document.write(output3);
+		document.write("<br/>");
+		
+		var output4=s.match(pattern4);
+		alert("/an/i");
+		document.write(output4);
+		document.write("<br/>");
+		
+		var output5=s.match(pattern5);
+		alert("/An/gi");
+		document.write(output5);
+		document.write("<br/>");
+		
+		var output6=s.match(pattern6);
+		alert("/an/gi");
+		document.write(output6);
+		
+		
+    </script>
+    
+    <script> 
+		document.write("<br/>");
+		var str="We are fast growing Software Company located in Chennai, India.";
+		pattern = new RegExp("ar","gi");
+		document.write("1-" + pattern.exec(str)+" ");
+		document.write("2-" + pattern.exec(str)+" ");
+		document.write("3-" + pattern.exec(str)+" ");
+		pattern = new RegExp("in","gi");
+		document.write("a-"+pattern.exec(str)+" ");
+		document.write("b-"+pattern.exec(str)+" ");
+		document.write("c-"+pattern.exec(str)+" ");
+		document.write("d-"+pattern.exec(str)+" ");
+	</script> 
+   
+</body>
+</html>

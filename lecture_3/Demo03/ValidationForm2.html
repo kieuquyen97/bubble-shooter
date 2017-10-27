@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Validate Form 2</title>
+</head>
+
+<body>
+	<script> 
+		//Check email:
+		var pattern1= /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{3})+$/;
+		//var pattern2 = /^\w([a-zA-Z0-9_\.-])+\@\w[a-zA-Z0-9\-\.]+\.\w+$/;
+		
+		//Check id card
+		var pattern3 = /[0-9]{8}$/;
+		
+		//Check Vietnam phone number --> bai tap cho sinh vien
+		//1.Dien thoai co dinh: khong bat buoc co so khong dau va co tu 8 - 10 ky tu so
+		var pattern4 =/(^0[1-9]|[1-9]\d)\d{...}$/ ;
+		//2. dien thoai di dong: bat buoc co so 0 dau va co tu 10 - 12 ky tu so
+		var pattern5=/^0[1-9]\d{...}$/;
+		
+	</script> 
+    
+    
+   
+</body>
+</html>

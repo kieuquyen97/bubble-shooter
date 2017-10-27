@@ -1,0 +1,32 @@
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    
+    <head>
+        <title>JavaScript Function</title>
+     	<script>
+		function info(message)
+			{
+				alert(message);
+			}
+			
+			function sum(x, y)
+			{
+				x = x + y;
+				return x;
+			}
+        </script>
+    </head>
+    
+    <body>
+    	<script>
+			document.write('Calling info Function:');
+			info("FIT - SGU");
+			document.write('<br>Calling sum Function');
+			
+			var x = 2, y =3;
+			document.write('<br>x + y = ' + sum(x,y));
+			document.write('<br>x = ' + x);
+		</script>
+    </body>
+
+</html>

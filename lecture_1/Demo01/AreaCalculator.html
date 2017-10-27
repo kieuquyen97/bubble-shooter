@@ -1,0 +1,61 @@
+<html>
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Area Calculator</title>
+        
+    	<script language="""JavaScript">
+
+			<!-- Begin
+			function doArea(num) 
+			{
+				switch(num) 
+				{
+					case 0 : return (""); break;
+					case 1 : var length = prompt("Nhập cạnh của hình vuông:", "");
+							 length = length * length;
+							 return (length); break;
+					case 2 : var width = prompt("Nhập cạnh của tam giác:", "");
+							 var height = prompt("Nhập chiều cao của tam giác:", "");
+							 return (width * height / 2); break;
+					case 3 : var width = prompt("Nhập chiều dài của hình chữ nhật:", "");
+							 var height = prompt("Nhập chiều cao của hình chữ nhật:", "");
+							 return (width * height); break;
+					case 4 : var radius = prompt("Nhập bán kính của hình tròn: ", "");
+							 return (Math.PI * Math.pow(radius, 2)); break;
+					case 5 : var radius = prompt("Nhập bán kính của hình elip:", 0);
+							 return (4 * Math.PI * (Math.pow(radius, 2))); break;
+			   }
+			}
+			//  End -->
+
+		</script>
+        
+    </head>
+    
+    <body>
+   	<center>
+      <form name="calcarea"> 
+            	Tính diện tích của 
+                <table border="1">
+	                <tr>
+						<td>
+<!--	                      <select name="shape" size="1" onChange=" form.area.value = doArea(this.selectedIndex);" > -->
+                          <select name "shape" size = "1" onChange="calcarea.area.value = doArea(selectedIndex);">
+                                <option> Chọn lựa </option>
+                          		<option value="square">Hình vuông</option>
+                                <option value="triangle">Hình tam giác </option>
+                                <option value="rectangle">Hình chữ nhật </option>
+                                <option value="circle">Hình tròn </option>
+                                <option value="sphere">Hình ovan </option>
+                       	  </select>
+                        </td>
+                        <td> <input type="text" name="area" size="20"> </td>
+                  </tr>
+                </table>
+        </form>
+      <h1>&nbsp;</h1>
+   	   </center>
+    
+    </body>
+</html>

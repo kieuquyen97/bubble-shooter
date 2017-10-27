@@ -1,0 +1,45 @@
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Events</title>
+
+<script>
+function processFunction()
+{
+        //alert('A');
+        //var x = document.form1.txt01.value;
+        //alert(x);
+        var x = Number(document.form1.txt01.value);
+        var y = Number(document.form1.txt02.value);
+        
+        document.form1.txtResult.value = 2 * (x + y);
+        
+        var element = document.getElementById('divResult');
+        element.innerHTML = 'x * y = ' + (x*y);
+        element.style.color = 'blue';
+        //element.innerHTML = '<img src="a.png" width=200/>';
+}
+</script>
+
+</head>
+
+<body>
+
+<form name="form1" method="get" action="">
+        <input type="button" onclick="processFunction();" name="btn01" value="Button" />
+
+        <br /><hr />
+
+        X = <input type="text" name="txt01" value="0" 
+                        onkeydown="document.form1.txtResult.value += 'down'"
+                        onkeypress="document.form1.txtResult.value += 'press'"
+                        onkeyup="document.form1.txtResult.value += 'up'"        />
+        <br />
+        Y = <input type="text" name="txt02" value="0" />
+
+        <br />
+
+        <input type="text" name="txtResult" value="[To be displayed...]" size=100 />
+        <span id="divResult" style="color:red;">Thanh</span>
+</form>
+</body>
+</html>

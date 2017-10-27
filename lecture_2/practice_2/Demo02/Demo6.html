@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Thuộc tính đặc biệt event</title>
+    
+    <script>
+	  function changeByEvent(evt)
+	  {
+		  var objHTMLDiv = document.getElementById('testEvent');
+		  
+		  // ALT --> RED
+		  if (evt.altKey)
+		  {
+			  objHTMLDiv.style.color = 'red';
+		  }
+		  
+		  // CTRL --> GREEN
+		  if (evt.ctrlKey)
+		  {
+			  objHTMLDiv.style.color = 'green';
+		  }
+		  
+		  //SHIFT --> BLUE
+		  if (evt.shiftKey)
+		  {
+			  objHTMLDiv.style.color = 'blue';
+		  }
+		  
+		  //CTRL + SHIFT --> BLACK
+		  if (evt.ctrlKey && evt.shiftKey) // nếu không đè 3 phím trên
+		  {
+			  objHTMLDiv.style.color = 'black';
+		  }
+	   }
+    </script>
+  
+  </head>
+  
+  <body>
+    <div id="testEvent" onclick="changeByEvent(event);">
+      Quê hương là gì hở mẹ ?<br />
+      Mà cô giáo dạy phải yêu ? <br />
+      Quê hương là gì hở mẹ ? <br />
+      Ai đi xa cũng nhớ nhiều ? <br />
+      Quê hương là cầu tre nhỏ<br />
+      Mẹ về nón lá nghiêng che<br />
+      Là hương hoa đồng cỏ nội<br />
+      Bay trong giấc ngủ đêm hè.
+    </div>
+  </body>
+</html>

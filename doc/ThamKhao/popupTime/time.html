@@ -1,0 +1,188 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<title>popup Time</title>
+		<script language="JavaScript">
+
+			
+			function inc(id,max){
+				try{
+					var elemenet = document.getElementById(id);
+					if(parseInt(elemenet.value) >= parseInt(max)){
+						elemenet.value = "00";
+						return;
+					}
+					if (elemenet.value.length == 0){
+						elemenet.value = "00";
+					}else if(elemenet.value.length == 1){
+						elemenet.value = "0" + elemenet.value;
+					}
+					var tens = elemenet.value.substring(0,1);
+					var ones = elemenet.value.substring(1,2);
+					if(parseInt(ones)<9){
+						ones = parseInt(ones) + 1;					
+					}else{
+						tens = parseInt(tens) + 1;	
+						ones = "0";				
+					}
+					elemenet.value = tens + ones;
+				}catch(e){
+					alert("insert numbers in : " + id);
+				}
+			}
+			function dec(id,max){
+				try{
+					var elemenet = document.getElementById(id);
+					alert("id Value ="+id.value);
+					if(elemenet.value == "0" || elemenet.value == "00"){
+						elemenet.value = max;
+						return;
+					}
+					if (elemenet.value.length == 0){
+						elemenet.value = "00";
+					}else if(elemenet.value.length == 1){
+						elemenet.value = "0" + elemenet.value;
+					}
+					var tens = elemenet.value.substring(0,1);
+					var ones = elemenet.value.substring(1,2);
+					if(parseInt(ones)> 0){
+						ones = parseInt(ones) - 1;					
+					}else{
+						tens = parseInt(tens) - 1;	
+						ones = "9";				
+					}
+					elemenet.value = tens + ones;
+				}catch(e){
+					alert("insert numbers in : " + id);
+				}
+			}
+			function setValue(){
+				var hourElement = document.getElementById("hour");
+				var minElement = document.getElementById("min");
+				var secElement = document.getElementById("sec");
+				var ampmElement = document.getElementById("ampm");
+				var timeElement = document.getElementById("time");
+				timeElement.value = hourElement.value+":"+minElement.value
+									+":"+secElement.value+" "+ampmElement.value;
+			}
+			function parseTime(){
+				try{
+					var hourElement = document.getElementById("hour");
+					var minElement = document.getElementById("min");
+					var secElement = document.getElementById("sec");
+					var ampmElement = document.getElementById("ampm");
+					var timeElement = document.getElementById("time");
+					var elements = timeElement.value.split(":");
+					elements[2]=elements[2].substr(0,2);		
+					for (i = 0; i < elements.length; i++) {
+						if (isNaN(elements[i])) {
+							throw Error;
+						}
+					}
+					hourElement.value = elements[0];
+					minElement.value = elements[1];
+					secElement.value = elements[2];
+					if(	timeElement.value.match("AM")!= null
+						||timeElement.value.match("am")!= null){
+						ampmElement.value = "AM";	
+					}else{
+						ampmElement.value = "PM";
+					}
+				}catch(e){
+					alert("insert value in correct format for ex: " + "01:25:09 AM");
+				}
+				
+			}
+			function validateTime(id,max){
+				try{
+					var elemenet = document.getElementById(id);
+					if(isNaN(elemenet.value)){
+						element.value="00";
+						throw Error;
+					}
+					if(parseInt(elemenet.value)>parseInt(max)){
+						alert("value of "+id+" must be less than "+max);
+						element.value="00";
+					}
+				}catch(e){
+					alert("insert numbers in : " + id);
+					document.getElementById(id).value = "00";
+				}
+			}
+			
+		</script>
+	</head>
+	<body>
+		<form name="timeForm">
+		<table border="1">
+			<tbody><tr>
+				<td>
+					<input id="hour" maxlength="2" size="2" value="00" onblur="validateTime('hour',12);" type="text">
+				</td>
+				<td>
+					<table>
+						<tbody><tr valign="bottom">
+							<td>
+								<img src="time_files/up.jpg" onclick="inc('hour',12);">
+							</td>
+						</tr>
+						<tr valign="top">
+							<td>
+								<img src="time_files/down.jpg" onclick="dec('hour',12);">
+							</td>
+						</tr>
+					</tbody></table>
+				</td>
+					<td>
+						<input id="min" maxlength="2" size="2" value="00" onblur="validateTime('min',59);" type="text">
+					</td>
+				<td>
+					<table>
+						<tbody><tr>
+							<td>
+								<img src="time_files/up.jpg" onclick="inc('min',59);">
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<img src="time_files/down.jpg" onclick="dec('min',59);">
+							</td>
+						</tr>
+					</tbody></table>
+				</td>
+					<td>
+						<input id="sec" maxlength="2" size="2" value="00" onblur="validateTime('sec',59);" type="text">
+					</td>
+				<td>
+					<table>
+						<tbody><tr>
+							<td>
+								<img src="time_files/up.jpg" onclick="inc('sec',59);">
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<img src="time_files/down.jpg" onclick="dec('sec',59);">
+							</td>
+						</tr>
+					</tbody></table>
+				</td>
+				<td>
+					<select id="ampm">
+						<option value="AM" selected="selected">AM</option>
+						<option value="PM">PM</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="7">
+					<input value="Go!" onclick="setValue();" type="button">
+					<input id="time" type="text">		
+					<input value="Parse" onclick="parseTime();" type="button">			
+				</td>
+			</tr>
+		</tbody></table>
+		</form>
+	
+
+</body></html>

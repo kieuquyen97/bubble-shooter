@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+
+	<script>
+		// document.forms.length == 2
+		var f1 = document.forms[0];
+		f1 = document.forms["form1"];
+		f1 = document.form1; //form name
+		
+		var f2 = document.forms[1];
+		f2 = document.forms["form2"];
+		f2 = document.form2; //form name
+	</script>
+    
+</head>
+
+<body>
+
+		<form name="form1" ...>
+			<!-- Code code code -->
+		</form>
+
+		<form name="form2" ...>
+			<!-- Code code code -->
+		</form>
+
+</body>
+</html>

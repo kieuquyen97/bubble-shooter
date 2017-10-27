@@ -1,0 +1,57 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title> GCD & LCM Calculator </title>
+	<script language=""="JavaScript">
+    
+		<!-- Begin
+		function getGCD() 
+		{
+			var w, x, y;
+			x = document.lcm_gcd.a.value;
+			y = document.lcm_gcd.b.value;
+			while (y != 0) 
+			{
+				w = x % y;
+				x = y;
+				y = w;
+			}
+			return x;
+		}
+		
+		function getLCM() 
+		{
+			var gcd = getGCD();
+			var lcm = (document.lcm_gcd.a.value * document.lcm_gcd.b.value) / gcd;
+			document.lcm_gcd.lcmA.value = lcm;
+			document.lcm_gcd.gcdA.value = gcd;
+		}
+		//  End -->
+	
+    </script>
+
+</head>
+
+<body>
+
+	<center>
+        <form name=lcm_gcd>
+	        <table border=1>
+            	<tr><td colspan="=2" align="center">Tính ước chung bội chung</td><tr>
+    		    <tr>
+        			<td width=200> Số thứ 1	<br> <input type="text" name="a"> </td>
+        			<td width=200> Số thứ 2 <br> <input type="text" name="b"> </td>
+		        </tr>
+		        <tr>
+        			<td colspan=2 align=center><input type="button" value= "Tính" onClick="getLCM()"></td>
+        		</tr>
+        		<tr>
+			        <td> Bội chung nhỏ nhất <br> <input type="text" name="lcmA"> </td> 
+                    <td> Ước chung lớn nhất <br> <input type="text" name="gcdA"> </td>
+		        </tr>
+        	</table>
+        </form>
+	</center>
+
+</body>
+</html>

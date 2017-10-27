@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>HTML as DOM</title>
+
+	<script>
+		var f1 = document.form1; 
+		var txt = f1.elements[0];
+		txt = f1.elements["txtA"];
+		txt = f1.txtA;
+	</script>
+</head>
+
+<body>
+    <form name="form1">
+        <input name="txtA" type="text" >
+        <input name ="btnA" type="submit" >
+    </form>
+</body>
+</html>

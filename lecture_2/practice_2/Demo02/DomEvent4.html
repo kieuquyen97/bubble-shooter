@@ -1,0 +1,24 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>HTML as DOM</title>
+</head>
+
+<body>
+
+	<div onMouseOver="this.style.color = 'red'"
+		 onMouseOut="this.style.color = 'blue'"> 
+         Khoa CNTT - Đại Học Sài Gòn - TP.HCM 
+	</div>
+	<br><br>
+	<form name="form1" method="post" action="">
+  		Text 1 <input type="text" name="txtName1" id="txtName1" onKeyPress="alert(this.value);" >
+		<br><br>
+		Text 2 <input type="text" name="txtName2" id="txtName2" onKeyUp="alert(this.value);" >  
+		<br>
+		<input type="button" name="btnSubmit" id="btnSubmit" value="Close" onClick="window.close();">
+	</form>
+
+</body>
+
+</html>

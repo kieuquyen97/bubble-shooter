@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Cau Truc Dieu Khien 3</title>
+</head>
+
+<body>
+	<script>
+		var array = new Array();
+		var i = -1;
+		array.length = 5;
+		for(i = 0; i < array.length; i++)
+		{
+			array[i] = i; // gán giá trị cho mảng	
+		}
+		for(i = 0; i < array.length; i++)
+		{
+			if (i > 3)
+				break;
+				
+			if (array[i] % 2 == 0)
+				document.write(array[i] + '<br>');	
+			else
+				continue;
+		}
+		document.write('<br><hr>');
+	</script>
+</body>
+</html>
