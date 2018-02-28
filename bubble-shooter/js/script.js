@@ -22,6 +22,10 @@
 window.onload = function() {
     var blowUpSound = new sound("assets/sounds/blow-up-sound.mp3");
     var buzzerSound = new sound("assets/sounds/buzzer.mp3");
+    var reloadImg =new Image();
+    reloadImg.src = '../assets/images/reload.png';
+
+    var speakerImg = new Image();
     // Get the canvas and context
     var canvas = document.getElementById("viewport");
     var context = canvas.getContext("2d");
@@ -783,6 +787,7 @@ window.onload = function() {
     // Draw a frame around the game
     function drawFrame() {
         // Draw background
+        
         context.fillStyle = "#e8eaec";
         context.fillRect(0, 0, canvas.width, canvas.height);
         
@@ -794,6 +799,7 @@ window.onload = function() {
         context.fillStyle = "#ffffff";
         context.font = "26px Verdana";
         context.fillText("Bubble Shooter", 15, 50);
+        // context.drawImage(reloadImg, 50, 50, 18, 18);
         
         // Display fps
         // context.fillStyle = "#ffffff";
