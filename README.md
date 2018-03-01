@@ -12,7 +12,7 @@
 
 
 ##  Hướng dẫn chơi
-      
+- Di chuyển chuột sao cho súng (thanh màu xanh) hướng đến vị trí bạn muốn bắn, click chuột trái để bắn.
 - Cứ nhiều hơn 3 quả bóng cùng màu nằm cạnh nhau sẽ biến mất, mỗi quả bóng biến mất bạn sẽ được 100 điểm.
 - Cứ sau 5 lần bắn mà không quả bóng nào  biến mất, thì một hàng mới sẽ được thêm vào đầu level
 - Cứ mỗi quả bóng nổ, bạn sẽ được 100 điểm
