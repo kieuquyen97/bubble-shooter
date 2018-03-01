@@ -1,6 +1,6 @@
 body {
   /* background-color: aqua; */
-  background-image: url("../assets/images/panel1.png");
+  background-image: url("../assets/images/hill-clipart-green-4.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -17,5 +17,6 @@ canvas {
   background-image: url("../assets/images/background1.jpg");
   margin: auto;
   background-color: #f3f3f3;
-  /* ">Full Center ON Page */
+  border: #0ecc86 10px solid;
+  border-radius: 4%;
 }

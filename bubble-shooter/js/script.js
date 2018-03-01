@@ -21,7 +21,7 @@
 // The function gets called when the window is fully loaded
 window.onload = function() {
     var blowUpSound = new sound("assets/sounds/blow-up-sound.mp3");
-    var buzzerSound = new sound("assets/sounds/buzzer.mp3");
+    var gameOverSound = new sound("assets/sounds/kick_shock.wav");
     var reloadImg =new Image();
     reloadImg.src = '../assets/images/reload.png';
 
@@ -733,7 +733,7 @@ window.onload = function() {
         var yoffset =  level.tileheight/2;
         
         // Draw level background
-        context.fillStyle = "#2390e6";
+        context.fillStyle = "#a17ad9";
         // context.fillStyle = "url('../assets/images/panel1.png')";
         context.fillRect(level.x - 4, level.y - 4, level.width + 8, level.height + 4 - yoffset);
         
@@ -774,12 +774,10 @@ window.onload = function() {
             
             context.fillStyle = "#ffffff";
             context.font = "24px Verdana";
-            buzzerSound.play();
+            gameOverSound.play();
             
             drawCenterText("Game Over!", level.x, level.y + level.height / 2 + 10, level.width);
-            // buzzerSound.stop();
             drawCenterText("Click to start again", level.x, level.y + level.height / 2 + 40, level.width);
-            // buzzerSound.stop();
             
         }
     }
@@ -919,6 +917,7 @@ window.onload = function() {
     
     // Start a new game
     function newGame() {
+        gameOverSound.stop();
         // Reset score
         score = 0;
         
