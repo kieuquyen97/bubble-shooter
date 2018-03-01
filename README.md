@@ -2,13 +2,13 @@
 
 ## Hướng dẫn cài đặt
 
-    - Click vào Clone or download -> Download ZIP
+- Click vào Clone or download -> Download ZIP
 
-        ![](http://www.clipular.com/c/6673809088970752.png?k=2sMmTJplKK75q0DJbA8Cl5NXprc)
+    ![](http://www.clipular.com/c/6673809088970752.png?k=2sMmTJplKK75q0DJbA8Cl5NXprc)
 
-    - Giải nén folder vừa tải
+- Giải nén folder vừa tải
 
-    -  Mở file index.html để bắt đầu chơi
+-  Mở file *index.html* để bắt đầu chơi
 
 
 ##  Hướng dẫn chơi
